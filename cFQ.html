@@ -1,0 +1,127 @@
+
+<!-- saved from url=(0067)http://www.math.brown.edu/tbanchof/Beyond3d/chapter4/section07.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <style>
+    body {font-family: cursive; font-size:18px;}
+  </style>
+
+  <title>Counting Faces of n-Dimensional Cubes</title>
+  
+</head>
+
+<body style="background-color: ivory; width: 80%; margin: auto">
+
+<h2 style="text-align: center">Counting the Faces of Higher-Dimensional Cubes</h2>
+
+<p style="text-align: center;">
+Analogous to the sequence of simplexes in each dimension, we have a
+      sequence of cubes. We begin a table.</p>
+
+<div style="background-color: lavender; width: 55%; margin-left: auto; margin-right: auto;  border: 3px solid black; padding: 10px;">
+    <img src="./Counting Faces of n-Dimensional Cubes_files/image14.gif" style="display: block; margin:auto auto;">
+</div>
+    
+<div style="float:right; width:25%; margin-top:40px; margin-left:20px; border:1px solid black; padding:5px; text-align:center; background-color:lavender;">
+<img src="./Counting Faces of n-Dimensional Cubes_files/image15.gif" alt="hypercube">
+<br>
+Moving a cube perpendicular to itself creates a hypercube.
+</div>
+
+<p align="JUSTIFY">
+When we try to fill in the missing numbers for a hypercube, the process becomes a bit more difficult. We know that we can generate a hypercube by taking an ordinary cube and moving it in a direction perpendicular to itself. We can show what is happening schematically by drawing two cubes, one obtained by displacement from the other. We draw the first cube in red and the second in blue. As the red cube moves toward the blue cube, the 8 corners trace out 8 parallel edges. We have 12 edges on the red cube, 12 on the blue, and now 8 new edges for a total of 32 edges on the hypercube.
+
+</p><p align="JUSTIFY">
+Finding the number of square faces on the hypercube presents more of a problem, but a version of the same method can solve it. There are 6 squares on the red cube and 6 on the blue one, and we also find 12 squares traced out by the edges of the moving cube for a total of 24.
+
+</p><p align="JUSTIFY">
+The edges in the hypercube come in four groups of 8 parallel
+      edges. Similarly the squares can be considered as six groups of
+      4 parallel squares, one such square through each vertex. The
+      illustration on the bottom, left, shows two groups of 4 parallel
+      squares. Another group is shown on the right. We can then go on
+      to identify the remaining three groups of 4 squares to obtain
+      the entire set of 24 squares in the hypercube. Note that it is
+      easier to identify the 4 squares when they do not overlap and
+      relatively more difficult when the overlap is large.</p>
+
+<div style="background-color: lavender; width: 75%; margin-left: auto; margin-right: auto; border: 2px solid black; padding: 0 0; text-align: center;"> 
+   
+    <div style=" width:96%; margin: 5px auto; border: 1px solid red;">
+
+  <img src="./Counting Faces of n-Dimensional Cubes_files/image16.gif" style="margin: 20px 5px; border: 1px solid green; padding: 2px 2px; width: 45%; height: auto; display:inline-block;">
+
+  <img src="./Counting Faces of n-Dimensional Cubes_files/image17.gif" style="margin: 20px 5px; border: 1px solid green; padding: 2px 2px; width: 45%; height: auto; display:inline-block;">
+
+</div>
+    
+<p style="margin: 5;">        <i font-weight:="">Left</i>: Two groups of four parallel square faces in a
+	      hypercube. <i>Right</i>: One more group of four parallel
+    faces in a hypercube.
+</p>    
+    
+</div>
+
+
+ 
+<p align="JUSTIFY">
+This manner of grouping the faces of an object is particularly effective when the object possesses a great deal of symmetry, as does the hypercube. A segment possesses one symmetry, obtained by interchanging its endpoints. A square has a much larger number of symmetries: we can rotate the square into itself by one, two, or three quarter-turns about its center, and we can reflect the square across either of its diagonals, or across the horizontal or vertical lines through its center. The even larger group of symmetries of the cube enables us to move any vertex to any other vertex and any edge and square at that vertex to a chosen edge and square at the new vertex. The collection of symmetries is one of the most important examples of an algebraic structure known as a group. The analysis of symmetry groups has provided extremely significant tools in modern geometry and in the applications of geometry to molecular chemistry and quantum physics.
+
+</p><p align="JUSTIFY">
+The hypercube is so highly symmetric that every vertex looks like every other vertex. If we know what happens at one vertex, we can figure out what is going to happen at all corners. At each vertex there are as many square faces as there are ways to choose 2 edges from among the 4 edges at the point, namely 6. Since there are 16 corners, we can multiply 6 by 16 to get 96, but this counts each square four times, once for each of its corners. The correct number of squares in a hypercube is then 96/4, or 24.
+
+</p><p align="JUSTIFY">
+It is possible to express these results in a general formula. Let <i>Q</i>(<i>k</i>, <i>n</i>) denote the number of <i>k</i>-cubes in an <i>n</i>-cube. To calculate <i>Q</i>(<i>k</i>, <i>n</i>) we may first find out how many <i>k</i>-cubes there are at each vertex. There are <i>n</i> edges emdnating from each vertex, and we get a <i>k</i>-cube for any subset of <i>k</i> distinct edges from among these <i>n</i> edges. Therefore the number of <i>k</i>-cubes at each vertex of an <i>n</i>-cube is <i>C</i>(<i>k</i>, <i>n</i>) = <i>n</i>!/[<i>k</i>!(<i>n</i> - <i>k</i>)!], the combinations of <i>n</i> things taken <i>k</i> at a time. Since we have <i>C</i>(<i>k</i>, <i>n</i>) <i>k</i>-cubes at each of the 2<sup><i>n</i></sup> corners, we obtain a total number 2<sup><i>n</i></sup><i>C</i>(<i>k</i>, <i>n</i>). But in this count, each <i>k</i>-cube is counted 2<sup><i>k</i></sup> times, so we divide by that number to get the final formula: <i>Q</i>(<i>k</i>, <i>n</i>) = 2<sup><i>n</i>-<i>k</i></sup><i>C</i>(<i>k</i>, <i>n</i>) .
+
+</p><p align="JUSTIFY">
+An inspection of the table reveals that the entries in each column add
+      up to a power of 3.</p>
+
+<table border="3" cellspacing="4" cellpadding="0" width="400" align="CENTER">
+<tbody><tr><td rowspan="2"></td><td align="CENTER">
+<table border="0" cellspacing="3" cellpadding="0">
+<tbody><tr><td><img src="./Counting Faces of n-Dimensional Cubes_files/image18.gif" width="400" height="307"></td></tr>
+</tbody></table></td></tr>
+</tbody></table>
+
+<p align="JUSTIFY">
+ There are several ways to verify this observation. We can observe
+      that each entry is the sum of twice the entry directly to the
+      left of it plus the entry above that one, so the sum of entries
+      in one column is three times the sum of the entries in the
+      previous column. This argument can easily be translated into a
+      formal proof by mathematical induction. We may also use the
+      explicit formula for the number of <i>k</i>-cubes in an
+      <i>n</i>-cube and observe the sum</p>
+
+<div style="width:60%; height:auto; margin:2px auto; text-align: center;">
+<img src="./Counting Faces of n-Dimensional Cubes_files/image19.gif" alt="3 by 3 cube of cubes" style="width: 200px; height:197px">
+<br>
+A cube subdivided into 27 smaller cubes.
+</div>
+
+<center><p>Q(0,<i>n</i>) + Q(1,<i>n</i>) + ... + Q(<i>n</i>-1,<i>n</i>) + Q(<i>n</i>,<i>n</i>) <br>
+= 2<sup><i>n</i></sup> + C(1,<i>n</i>)2<sup><i>n-1</i></sup> + C(2,<i>n</i>)2<sup><i>n-2</i></sup> + ... + C(<i>n</i>-1,<i>n</i>)2 + C(<i>n</i>,<i>n</i>)<br>
+= (2 + 1)<sup><i>n</i></sup> = 3<sup><i>n</i></sup><br>
+</p><p align="JUSTIFY">
+The most satisfying demonstration of this algebraic fact comes from the observation that we may divide the sides of an <i>n</i>-cube into three parts and extend this to divide the entire cube into 3<sup><i>n</i></sup> small cubes. We then have a small cube coming from each of the corners of the original, and one from each edge and one from each two-dimensional face, and so on. The final small cube is in the center. Thus the total number of small cubes is the sum of the numbers of <i>k</i>-cubes in the <i>n</i>-cube, and this value is 3<sup><i>n</i></sup>.
+
+</p><p align="JUSTIFY">
+One of Friedrich Froebel's kindergarten gifts was a cube subdivided
+into 27 small cubes. He would have liked this final demonstration.</p>
+
+<table border="0" cellpadding="0" cellspacing="0" align="LEFT">
+<tbody><tr><td width="5" rowspan="10"></td><td></td><td width="5" rowspan="10"></td></tr>
+<tr><td><a href="http://www.math.brown.edu/tbanchof/Beyond3d/chapter4/section08.html"><img src="./Counting Faces of n-Dimensional Cubes_files/next.gif" alt="[Next]" border="0" width="25" height="25"></a></td>
+<td><i><a href="http://www.math.brown.edu/tbanchof/Beyond3d/chapter4/section08.html">Paleoecology and Data Visualization</a></i><br></td></tr>
+<tr><td><a href="http://www.math.brown.edu/tbanchof/Beyond3d/index.html"><img src="./Counting Faces of n-Dimensional Cubes_files/up.gif" alt="[Up]" border="0" width="25" height="25"></a></td>
+<td><i><a href="http://www.math.brown.edu/tbanchof/Beyond3d/index.html">Table of Contents</a></i><br></td></tr>
+<tr><td><a href="http://www.math.brown.edu/tbanchof/Beyond3d/chapter4/section06.html"><img src="./Counting Faces of n-Dimensional Cubes_files/prev.gif" alt="[Prev]" border="0" width="25" height="25"></a></td>
+<td><i><a href="http://www.math.brown.edu/tbanchof/Beyond3d/chapter4/section06.html">Higher-Dimensional Simplexes</a></i><br></td></tr>
+</tbody></table>
+
+
+</center></body></html>
